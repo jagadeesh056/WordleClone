@@ -1,70 +1,92 @@
-# Getting Started with Create React App
+# Wordle Clone
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple Wordle game clone built with React. This project allows users to guess a 5-letter word within 6 attempts, following the rules of the popular Wordle game.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Interactive game board
+- On-screen keyboard
+- Real-time feedback on guesses
+- Displays win/loss messages
+- Option to start a new game
 
-### `npm start`
+## Demo
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Include a live link here if deployed, e.g., [Live Demo](https://your-deployment-link.com)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Project Structure
 
-### `npm test`
+```
+wordle-clone/
+├── public/
+├── src/
+│   ├── components/
+│   │   ├── GameBoard/
+│   │   │   ├── index.js
+│   │   │   └── index.css
+│   │   ├── KeyBoard/
+│   │   │   ├── index.js
+│   │   │   └── index.css
+│   │   ├── Message/
+│   │   │   ├── index.js
+│   │   │   └── index.css
+│   │   └── gameLogic/
+│   │       ├── index.js
+│   ├── App.js
+│   ├── App.css
+│   └── index.css
+├── package.json
+└── README.md
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+##  Installation & Running the Project
 
-### `npm run build`
+1. **Clone the Repository**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+https://github.com/your-username/wordle-clone.git
+cd wordle-clone
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. **Install Dependencies**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+npm install
+```
 
-### `npm run eject`
+3. **Run the Project**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+npm start
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## How to Play
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Guess the 5-letter word within 6 attempts.
+- Type your guess using the on-screen keyboard.
+- Press **ENTER** to submit your guess.
+- Use **BACKSPACE** to delete the last letter.
+- The cells will change color to indicate:
+  - **Green**: Correct letter in the correct position.
+  - **Yellow**: Correct letter in the wrong position.
+  - **Gray**: Incorrect letter.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Game Logic
 
-## Learn More
+- **Words:** The game selects a random word from the list: `REACT`, `REDUX`, `HOOKS`, `STATE`, `PROPS`.
+- **Guess Check:** The `checkGuess` function evaluates the guess for correctness.
+- **Win Condition:** Guessing the word correctly.
+- **Lose Condition:** Using all 6 attempts without guessing the word.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Technologies Used
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- React
+- JavaScript
+- CSS
 
-### Code Splitting
+## Future Improvements
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Add a larger word bank
+- Add animations and sound effects
+---
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
