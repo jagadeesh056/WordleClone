@@ -12,7 +12,7 @@ A simple Wordle game clone built with React. This project allows users to guess 
 
 ## Demo
 
-Include a live link here if deployed, e.g., [Live Demo](https://your-deployment-link.com)
+Include a live link here if deployed, e.g., [Live Demo](https://wordle-clone-liart.vercel.app/)
 
 ## Project Structure
 
